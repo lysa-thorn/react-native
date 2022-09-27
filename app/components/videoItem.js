@@ -13,12 +13,11 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default class VideoItem extends Component {
     render() {
         let video = this.props.video;
-        console.log(video.snippet.thumbnails.medium.url);
         return (
             <View style={styles.container}>
-                <Image source={{ uri: video.snippet.thumbnails.medium.url }} style={{ height: 200 }} />
+                <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 200 }} />
                 <View style={styles.descContainer}>
-                    <Image source={{ uri: 'https://randomuser.me/api/portraits/men/0.jpg' }} style={{ width: 50, height: 50, borderRadius: 25 }} />
+                    <Image source={require('../images/profile.png')} style={{ width: 50, height: 50, borderRadius: 25 }} />
                     <View style={styles.videoDetails}>
                         <Text numberOfLines={2} style={styles.videoTitle}>{video.snippet.title}</Text>
                         <Text style={styles.videoStats}>{video.snippet.channelTitle + " · " + nFormatter(video.statistics.viewCount, 1) + " · 3 months ago "}</Text>
