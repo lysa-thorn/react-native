@@ -1,133 +1,101 @@
-import React, { useRef } from 'react';
-import { View, Button, DrawerLayoutAndroid, TextInput, StyleSheet, TouchableOpacity, Text, Alert } from 'react-native';
-import { useState } from "react";
-
-const App = () => {
-    const [drawerPosition, setDrawerPosition] = useState('left');
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const validateLogin = () => {
-        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-        if (reg.test(email) === false) {
-            Alert.alert(
-                "Message",
-                "Email not correct",
-                [
-                    {
-                        text: "OK",
-                    },
-                ]
-            );
-        } else {
-            if (password != confirmPassword) {
-                Alert.alert(
-                "Message",
-                "Invalid credential",
-                [
-                    {
-                        text: "OK",
-                    },
-                ]);
-                
-            }else{
-                Alert.alert(
-                    "Message",
-                    "Email: " + email  + "\n" + "Password: " + password,
-                    [
-                        {
-                            text: "OK",
-                        },
-                    ]);
-            }
-        }   
-    }
-
-return (
-    <View style={styles.inputview}>
-        <View style={styles.LoginTextHeader}>
-            <Text style={styles.HeaderText}>Login Now!</Text>
-        </View>
-
-        {/* email input */}
-        <Text style={styles.TextLabel}>Email</Text>
-        <TextInput
-            style={styles.TextInput}
-            placeholder="Email"
-            placeholderTextColor="#003f5c"
-            onChangeText={(email) => { setEmail(email) }}
-        />
-
-        {/* input password */}
-        <Text style={styles.TextLabel}>Password</Text>
-        <TextInput
-            style={styles.TextInput}
-            placeholder="Password"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
-            onChangeText={(password) => { setPassword(password) }}
-        />
-
-        {/* input confirm password */}
-        <Text style={styles.TextLabel}>Confirm Password</Text>
-        <TextInput
-            style={styles.TextInput}
-            placeholder="Confirm Password"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
-            onChangeText={(confirmPassword) => { setConfirmPassword(confirmPassword) }}
-        />
-        {/* button login */}
-        <TouchableOpacity
-            style={styles.loginBtn}
-            onPress={validateLogin}
-        >
-            <Text style={styles.TextBtnLogin}>LOGIN</Text>
-        </TouchableOpacity>
-        <Text style={styles.MessageText}>{message}</Text>
-    </View>
-);
-}
-
-const styles = StyleSheet.create({
-    inputview: {
-        width: "100%",
-        padding: 30,
-        marginTop: 60,
-    },
-    TextInput: {
-        padding: 10,
-        borderRadius: 10,
-        backgroundColor: "lightblue",
-        margin: 10
-    },
-    loginBtn: {
-        width: "40%",
-        borderRadius: 10,
-        backgroundColor: "blue",
-        alignItems: "center",
-        padding: 13,
-        margin: 10,
-        marginLeft: 100,
-    },
-    TextLabel: {
-        marginLeft: 10
-    },
-    TextBtnLogin: {
-        color: "white"
-    },
-    LoginTextHeader: {
-        padding: 20,
-        alignItems: 'center'
-    },
-    HeaderText: {
-        fontSize: 25,
-        fontWeight: "bold",
-    },
-    MessageText: {
-        color: "red",
-        margin: 10
-    },
-});
-export default App;
+ import React, { Component } from 'react';
+ import {
+   Platform,
+   StyleSheet,
+   Text,
+   View,
+   Image,
+   TouchableOpacity,
+   FlatList
+ } from 'react-native';
+ import Icon from 'react-native-vector-icons/MaterialIcons';
+ import VideoItem from './app/components/videoItem';
+ import data from './app/data.json';
+ 
+ export default class App extends Component {
+   render() {
+     return (
+       <View style={styles.container}>
+         <View style={styles.navBar}>
+           <Image source={require('./app/images/logo.png')} style={{ width: 98, height: 22 }} />
+           <View style={styles.rightNav}>
+             <TouchableOpacity>
+               <Icon style={styles.navItem} name="search" size={25} />
+             </TouchableOpacity>
+             <TouchableOpacity>
+             <Icon style={styles.navItem} name="account-circle" size={25} />
+             </TouchableOpacity>
+           </View>
+         </View>
+         <View style={styles.body}>
+           <FlatList
+           data={data.items}
+           renderItem={(video)=><VideoItem video={video.item} />}
+           keyExtractor={(item)=>item.id}
+           ItemSeparatorComponent={()=><View style={{height:0.5,backgroundColor:'#E5E5E5'}}/>}
+ 
+            />
+         </View>
+         <View style={styles.tabBar}>
+           <TouchableOpacity style={styles.tabItem}>
+             <Icon name="home" size={25}/>
+             <Text style={styles.tabTitle}>Home</Text>
+           </TouchableOpacity>
+           <TouchableOpacity style={styles.tabItem}>
+             <Icon name="whatshot" size={25} />
+             <Text style={styles.tabTitle}>Trending</Text>
+           </TouchableOpacity>
+           <TouchableOpacity style={styles.tabItem}>
+             <Icon name="subscriptions" size={25} />
+             <Text style={styles.tabTitle}>Subscriptions</Text>
+           </TouchableOpacity>
+           <TouchableOpacity style={styles.tabItem}>
+             <Icon name="folder" size={25} />
+             <Text style={styles.tabTitle}>Library</Text>
+           </TouchableOpacity>
+         </View>
+       </View>
+     );
+   }
+ }
+ 
+ const styles = StyleSheet.create({
+   container: {
+     flex: 1
+   },
+   navBar: {
+     height: 55,
+     backgroundColor: 'white',
+     elevation: 3,
+     paddingHorizontal: 15,
+     flexDirection: 'row',
+     alignItems: 'center',
+     justifyContent: 'space-between'
+   },
+   rightNav: {
+     flexDirection: 'row'
+   },
+   navItem: {
+     marginLeft: 25
+   },
+   body: {
+     flex: 1
+   },
+   tabBar: {
+     backgroundColor: 'white',
+     height: 60,
+     borderTopWidth: 0.5,
+     borderColor: '#E5E5E5',
+     flexDirection: 'row',
+     justifyContent: 'space-around'
+   },
+   tabItem: {
+     alignItems: 'center',
+     justifyContent: 'center'
+   },
+   tabTitle: {
+     fontSize: 11,
+     color: '#3c3c3c',
+     paddingTop: 4
+   }
+ });
