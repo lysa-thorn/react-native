@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    Platform,
     StyleSheet,
     Text,
     View,
@@ -9,18 +10,16 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
-export default class VideoItem extends Component {
+export default class HistoryVideoItem extends Component {
     render() {
         let video = this.props.video;
-        console.log(video.snippet.author.image);
         return (
             <View style={styles.container}>
-                <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 200 }} />
+                <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 100 }} />
                 <View style={styles.descContainer}>
-                    <Image source={{uri: video.snippet.author.image}} style={{ width: 50, height: 50, borderRadius: 25 }} />
+                    <Image source={require('../images/profile.png')} style={{ width: 30, height: 30, borderRadius: 25 }} />
                     <View style={styles.videoDetails}>
                         <Text numberOfLines={2} style={styles.videoTitle}>{video.snippet.title}</Text>
-                        <Text style={styles.videoStats}>{video.snippet.channelTitle + " · " + nFormatter(video.statistics.viewCount, 1) + " · 3 months ago "}</Text>
                     </View>
                     <TouchableOpacity>
                         <Icon name="more-vert" size={20} color="#999999"/>
@@ -53,7 +52,8 @@ function nFormatter(num, digits) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 15
+        padding: 10,
+        width: 200,
     },
     descContainer: {
         flexDirection: 'row',
