@@ -12,7 +12,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default class VideoItem extends Component {
     render() {
         let video = this.props.video;
-        console.log(video.snippet.author.image);
         return (
             <View style={styles.container}>
                 <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 200 }} />
