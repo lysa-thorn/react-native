@@ -1,16 +1,9 @@
 {
-    "kind": "youtube#videoListResponse",
-    "etag": "\"ld9biNPKjAjgjV7EZ4EKeEGrhao/JIwojTYGRW-iB9eFQjYOoxfygiM\"",
-    "nextPageToken": "CAUQAA",
-    "pageInfo": {
-        "totalResults": 200,
-        "resultsPerPage": 5
-    },
     "items": [
         {
             "id": "1",
             "snippet": {
-                "title": "Sea Food",
+                "title": "Sea Food Yummy",
                 "description": "Shoutout to dbrand! Get The Grip for 50% Off!: http://www.DeFrancoGrip.com\nTaking Our A's and Putting Them In Your Q's…: https://youtu.be/CZgHbTfALLo\nCheckout The DeFrancoFam!: https://youtu.be/A1gx0-pGc_k\nAudio Only Versions of the PDS:\n-iTunes: http://PDSPodcast.com\n-Soundcloud: https://soundcloud.com/thephilipdefrancoshow\n————————————\nWhy Feminists Are Disowning Lena Dunham Now and The Roy Moore Tax Reform \"Problem\": https://youtu.be/BrsoYVSgYQs\nWhy We Need To Talk About The Insane YouTube Kids Problem… #Elsagate: https://youtu.be/X_K-shDq-kM\n————————————\nTODAY IN AWESOME: \nJim & Andy: The Great Beyond: https://www.youtube.com/watch?v=6kkFV0tgZxQ\nEmoji Movie Honest Trailer: https://www.youtube.com/watch?v=CzmIrPvIzxk\nStranger Things Cast Answer Web’s Most Searched Questions: https://youtu.be/_EvMYEfF_hQ\nJapanese Game Show Slippery Stairs: http://digg.com/2017/slippery-stairs-japanese-game-show\nSecret Link: https://youtu.be/1GIf1fBe4ow\n\nSTORIES:\nNet Neutrality: \nContact your representative! : https://www.battleforthenet.com/ or  https://www.callmycongress.com/\nhttps://apps.fcc.gov/edocs_public/attachmatch/DOC-347868A1.pdf\nhttps://www.politico.com/story/2017/11/20/net-neutrality-repeal-fcc-251824\nhttps://www.washingtonpost.com/news/the-switch/wp/2017/11/21/the-fcc-has-unveiled-its-plan-to-rollback-its-net-neutrality-rules/?utm_term=.40bc6541969e\nhttps://arstechnica.com/tech-policy/2017/11/rip-net-neutrality-fcc-chair-releases-plan-to-deregulate-isps/\n\nCharlie Rose Allegations: \nhttps://www.washingtonpost.com/investigations/eight-women-say-charlie-rose-sexually-harassed-them--with-nudity-groping-and-lewd-calls/2017/11/20/9b168de8-caec-11e7-8321-481fd63f174d_story.html?utm_term=.a633336175be\nhttps://www.nytimes.com/2017/11/20/us/charlie-rose-women.html\nhttps://www.cbsnews.com/news/charlie-rose-suspended-sexual-misconduct-allegations/\nhttp://www.foxnews.com/entertainment/2017/11/21/cbs-news-fires-charlie-rose-following-sexual-misconduct-allegations.html\nhttp://www.businessinsider.com/charlie-rose-accused-of-improper-behavior-by-former-interns-2017-11  \n————————————\nJOIN THE ADVENTURE: http://DeFrancoElite.com\nOH DAMN, WHERE DID YOU GET THAT DOPE SHIRT?!: http://ShopDeFranco.com\n————————————\nFACEBOOK: http://on.fb.me/mqpRW7\nTWITTER: http://Twitter.com/PhillyD\nINSTAGRAM: https://instagram.com/phillydefranco/\nSNAPCHAT: TheDeFrancoFam\nREDDIT: https://www.reddit.com/r/DeFranco\nSOUNDCLOUD: https://soundcloud.com/thephilipdefrancoshow\n————————————\nEdited by:\nJames Girardier - https://twitter.com/jamesgirardier\n\nProduced by:\nAmanda Morones - https://twitter.com/MandaOhDang\n\nMotion Graphics Artist:\nBrian Borst - https://twitter.com/brianjborst\n\nP.O. BOX\nAttn: Philip DeFranco\n16350 Ventura Blvd\nSte D #542\nEncino, CA 91436",
                 "thumbnails": {
                     "default": {
@@ -18,6 +11,9 @@
                         "width": 120,
                         "height": 90
                     }
+                },
+                "author": {
+                    "image": "https://i.etsystatic.com/34695803/r/il/6cd063/3762393053/il_794xN.3762393053_hjxf.jpg"
                 },
                 "channelTitle": "Philip DeFranco"
             },
@@ -41,6 +37,9 @@
                         "height": 90
                     }
                 },
+                "author": {
+                    "image": "https://i.etsystatic.com/32469537/r/il/69c4f6/4033477054/il_fullxfull.4033477054_7t70.jpg"
+                },
                 "channelTitle": "PinkVEVO"
             },
             "statistics": {
@@ -63,6 +62,9 @@
                         "height": 90
                     }
                 },
+                "author": {
+                    "image": "https://i.etsystatic.com/34695803/r/il/269646/3738930934/il_794xN.3738930934_qf7f.jpg"
+                },
                 "channelTitle": "Adult Swim"
             },
             "statistics": {
@@ -76,7 +78,7 @@
         {
             "id": "4",
             "snippet": {
-                "title": "Harry Potter",
+                "title": "Harry Potter Movie",
                 "description": "Harry Potter and the Philosopher's Stone - Sorting Ceremony.",
                 "thumbnails": {
                     "default": {
@@ -84,6 +86,9 @@
                         "width": 120,
                         "height": 90
                     }
+                },
+                "author": {
+                    "image": "https://i.etsystatic.com/22530935/r/il/e12dc2/2212316290/il_794xN.2212316290_dso3.jpg"
                 },
                 "channelTitle": "WIRED"
             },
@@ -98,7 +103,7 @@
         {
             "id": "5",
             "snippet": {
-                "title": "Proto-Putty in Liquid Nitrogen & Other Crazy Tests!",
+                "title": "React",
                 "description": "In today's video, we find out just how much proto-putty can take before it \"breaks\"!\n\nSubscribe & “Ring the Bell”: https://goo.gl/618xWm\n\nClear Silicone Caulking: http://amzn.to/2Ahi9R8\nCaulking Gun: http://amzn.to/2AfuKUZ\nCorn Starch: http://amzn.to/2xYhjHt\nFood Coloring: http://amzn.to/2zuX0pD\n\nSee What Else I’m Up To:\n\nInstagram: https://goo.gl/C0Q1YU\nFacebook: https://goo.gl/mQbwtK\nPinterest: https://goo.gl/Gbffq4\n\nBusiness Inquiries: For sponsorship requests or business opportunities please contact me directly: https://goo.gl/Z2L6yM\n\nMusic by: Marc Torch - \"Mobile Electro 7\" \nRoyalty Free Music from Epidemic Sound: https://goo.gl/jlJWJO\n\nWARNING:\n\nThis video is only for entertainment purposes. If you rely on the information portrayed in this video, you assume the responsibility for the results. Have fun, but always think ahead, and remember that every project you try is at YOUR OWN RISK.\n\n✌️👑  RANDOM NATION: TRANSLATE this video and you'll GET CREDIT! Click Here: https://goo.gl/mQWSTQ\nWant credit TRANSLATING other videos? Click Here to see where else you can contribute: https://goo.gl/Dmpwbq\n\nTHANK YOU!! ✌️👑",
                 "thumbnails": {
                     "default": {
@@ -107,7 +112,10 @@
                         "height": 90
                     }
                 },
-                "channelTitle": "The King of Random"
+                "author": {
+                    "image": "https://reactjs.org/logo-og.png"
+                },
+                "channelTitle": "The King of React"
             },
             "statistics": {
                 "viewCount": "290204",
