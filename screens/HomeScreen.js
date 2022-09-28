@@ -15,7 +15,6 @@ export default class HomeStackScreen extends Component {
   render(){
     return (
       <View style={styles.container}>
-      
       <View style={styles.body}>
         <FlatList
         data={data.items}

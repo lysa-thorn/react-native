@@ -15,16 +15,18 @@ export default class HistoryVideoItem extends Component {
         let video = this.props.video;
         return (
             <View style={styles.container}>
-                <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 100 }} />
-                <View style={styles.descContainer}>
-                    <Image source={require('../images/profile.png')} style={{ width: 30, height: 30, borderRadius: 25 }} />
-                    <View style={styles.videoDetails}>
-                        <Text numberOfLines={2} style={styles.videoTitle}>{video.snippet.title}</Text>
+                 <TouchableOpacity>
+                    <Image source={{uri: video.snippet.thumbnails.default.url}} style={{ height: 100 }} />
+                    <View style={styles.descContainer}>
+                        <Image source={require('../images/profile.png')} style={{ width: 30, height: 30, borderRadius: 25 }} />
+                        <View style={styles.videoDetails}>
+                            <Text numberOfLines={2} style={styles.videoTitle}>{video.snippet.title}</Text>
+                        </View>
+                        <TouchableOpacity>
+                            <Icon name="more-vert" size={20} color="#999999"/>
+                        </TouchableOpacity>
                     </View>
-                    <TouchableOpacity>
-                        <Icon name="more-vert" size={20} color="#999999"/>
-                    </TouchableOpacity>
-                </View>
+                </TouchableOpacity>
             </View>
         )
     }

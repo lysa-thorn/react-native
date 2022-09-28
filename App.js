@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import LibraryScreen from './screens/LibraryScreen';
 import SubscriptionScreen from './screens/SubscriptionScreen';
+import ShortsScreen from './screens/ShortsScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   Platform,
@@ -53,7 +54,7 @@ export default function App()  {
 
           <Tab.Screen 
             name="Shorts" 
-            component={LibraryScreen} 
+            component={ShortsScreen} 
             options={{
               tabBarLabel: 'Shorts',
               tabBarIcon: ({ color, size }) => (
